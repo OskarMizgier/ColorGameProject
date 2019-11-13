@@ -22,9 +22,12 @@ h1 {
 
 .header {
     text-align: center;
+    background-color: white;
+    height: 30px;
+    color:black;
 }
 
-#message {
+.selected {
+    background-color: blue;
     color: white;
-    text-align: center;
 }
