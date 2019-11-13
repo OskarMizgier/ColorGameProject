@@ -1,5 +1,8 @@
 body {
     background-color: #232323;
+    margin: 0;
+    font-family: 'Montserrat', 'Avenir';
+    font-weight: 100;
 }
 
 
@@ -9,15 +12,31 @@ body {
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    border-radius: 50%;
+    transition: background-color 0.8s;
+    -webkit-transition: background-color 0.8s;
+    -moz-transition: background-color 0.8s;
 }
 
 #container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 h1 {
     color: white;
+    text-align: center;
+    margin: 0;
+    background-color: steelblue;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#colorDisplay {
+    font-size: 200%;
 }
 
 .header {
@@ -28,6 +47,35 @@ h1 {
 }
 
 .selected {
-    background-color: blue;
+    background-color:steelblue;
     color: white;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', 'Avenir';
+    font-weight: 700;
+    color: steelblue;
+    height: 100%;
+    font-size: inherit;
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+}
+
+button:hover {
+    background-color: steelblue;
+    color: white;
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+    text-transform: uppercase;
+    font-family: 'Montserrat', 'Avenir';
+    font-weight: 700;
+    color: steelblue;
+    font-size: inherit;
 }
