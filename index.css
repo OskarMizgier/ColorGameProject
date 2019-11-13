@@ -19,3 +19,12 @@ body {
 h1 {
     color: white;
 }
+
+.header {
+    text-align: center;
+}
+
+#message {
+    color: white;
+    text-align: center;
+}

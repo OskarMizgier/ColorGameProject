@@ -10,9 +10,13 @@ var colors = [
 
 // Select the square by Class
 var squares = document.querySelectorAll('.square');
-var pickedColor = colors[3];
+
+var pickedColor = pickColor();
+
 var colorDisplay = document.getElementById('colorDisplay');
 colorDisplay.textContent = pickedColor.toUpperCase();
+
+var messageDisplay = document.getElementById('message');
 
 // Loop through each six square and change their backgroundColor to colors[i]
 for (var i = 0; i < squares.length; i++) {
@@ -25,10 +29,27 @@ for (var i = 0; i < squares.length; i++) {
         var clickedColor = this.style.backgroundColor;
         //Compare the color with the clicked color and alert the result
         if(clickedColor === pickedColor) {
-            alert ('Correct')
+            messageDisplay.textContent = 'Correct!'
+            changeColors(clickedColor);
         } else {
-            alert ('wrong')
+            this.style.backgroundColor = '#232323'
+            messageDisplay.textContent = 'Try again!'
         }
     })
 };
 
+//Change colors of all squares when correct
+function changeColors (color) {
+for (var i = 0; i < squares.length; i++) {
+//Change each color
+    squares[i].style.backgroundColor = color;
+    }
+}
+
+
+
+// Pick random color from colors array
+function pickColor() {
+    var randomNumber = Math.floor(Math.random() * colors.length)
+    return colors[randomNumber]
+}
